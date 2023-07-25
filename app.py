@@ -9,6 +9,12 @@ frm = intro(None)
 frm.Show()
 intro.m_infoCtrl2.ShowMessage(None, "test")
 
+#
+
+start appeal
+
+
+wow
 app.MainLoop()
 
 
