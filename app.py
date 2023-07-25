@@ -10,7 +10,6 @@ frm.Show()
 intro.m_infoCtrl2.ShowMessage(None, "test")
 
 #app manager
-#new line for test
 app.MainLoop()
 
 
