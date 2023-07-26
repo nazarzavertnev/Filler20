@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QApplication
 
 import winsound
 
+#test code stroke
+
 import json
 
 Form, Window = uic.loadUiType("test.ui")
