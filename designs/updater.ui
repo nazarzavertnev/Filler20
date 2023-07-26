@@ -6,38 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>598</width>
-    <height>94</height>
+    <width>547</width>
+    <height>315</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Updater</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="status">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>461</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Проверка обновлений...</string>
-    </property>
-   </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>80</y>
-      <width>601</width>
+      <x>40</x>
+      <y>240</y>
+      <width>371</width>
       <height>20</height>
      </rect>
     </property>
@@ -48,27 +30,46 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>531</width>
-      <height>31</height>
+      <x>0</x>
+      <y>0</y>
+      <width>551</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../startup.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="status">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>281</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Arial</family>
-      <pointsize>15</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>Защита от несанкционированного доступа</string>
+     <string>Ожидание..</string>
     </property>
    </widget>
+   <zorder>label</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>status</zorder>
   </widget>
  </widget>
  <resources/>
