@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\karina\Documents\Docs\Python\Filler20\Filler20\designs\updater.ui'
+# Form implementation generated from reading ui file 'c:\Users\karina\Documents\Docs\Python\Filler20 - Copy\designs\updater.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.1
 #
@@ -12,16 +12,29 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(410, 39)
+        MainWindow.resize(598, 94)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(parent=self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(10, 10, 151, 16))
-        self.label.setObjectName("label")
+        self.status = QtWidgets.QLabel(parent=self.centralwidget)
+        self.status.setGeometry(QtCore.QRect(10, 50, 461, 16))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        self.status.setFont(font)
+        self.status.setObjectName("status")
         self.progressBar = QtWidgets.QProgressBar(parent=self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(160, 10, 241, 23))
-        self.progressBar.setProperty("value", 24)
+        self.progressBar.setGeometry(QtCore.QRect(0, 80, 601, 20))
+        self.progressBar.setProperty("value", 0)
+        self.progressBar.setTextVisible(False)
         self.progressBar.setObjectName("progressBar")
+        self.label_2 = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(10, 10, 531, 31))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setObjectName("label_2")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -30,4 +43,5 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Updater"))
-        self.label.setText(_translate("MainWindow", "Проверка обновлений..."))
+        self.status.setText(_translate("MainWindow", "Проверка обновлений..."))
+        self.label_2.setText(_translate("MainWindow", "Защита от несанкционированного доступа"))
