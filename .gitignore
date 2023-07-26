@@ -1,1 +1,3 @@
-/userFolder/*
+/userFolder/vbs/in*
+/userFolder/vbs/out*
+/userFolder/vbs/recv*
