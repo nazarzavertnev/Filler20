@@ -2,6 +2,7 @@ from PyQt5 import uic, QtGui, QtTest
 from PyQt5.QtWidgets import QApplication
 import winsound
 import os
+import subprocess
 from launcher import *
 
 Form, Window = uic.loadUiType(r'designs\updater.ui')
@@ -15,30 +16,30 @@ window.show()
 
 form.status.setText("Инициализация...")
 form.progressBar.setValue(15)
-os.system("git init")
-QtTest.QTest.qWait(1500)
+subprocess.Popen("git init", shell = True)
+QtTest.QTest.qWait(150)
 form.progressBar.setValue(25)
 
 form.status.setText("Получение обновлений...")
-os.system("git status")
-QtTest.QTest.qWait(1500)
+subprocess.Popen("git status", shell = True)
+QtTest.QTest.qWait(150)
 form.progressBar.setValue(35)
 
 form.status.setText("Восстановление файлов...")
-os.system("git reset --hard")
-QtTest.QTest.qWait(1500)
+subprocess.Popen("git reset --hard", shell = True)
+QtTest.QTest.qWait(150)
 
 form.status.setText("Получение статуса...")
 form.progressBar.setValue(50)
-os.system("git pull https://github.com/nazarzavertnev/Filler20.git")
-QtTest.QTest.qWait(1500)
+subprocess.Popen("git pull https://github.com/nazarzavertnev/Filler20.git", shell = True)
+QtTest.QTest.qWait(150)
 form.progressBar.setValue(75)
 
 form.status.setText("Обновление...")
-QtTest.QTest.qWait(1500)
-os.system("git fetch https://github.com/nazarzavertnev/Filler20.git")
+QtTest.QTest.qWait(150)
+subprocess.Popen("git fetch https://github.com/nazarzavertnev/Filler20.git", shell = True)
 form.progressBar.setValue(100)
-QtTest.QTest.qWait(1500)
+QtTest.QTest.qWait(150)
 
 window.close()
 start_launcher()
