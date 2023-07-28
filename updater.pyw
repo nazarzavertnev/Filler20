@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QApplication
 import winsound
 import os
 import subprocess
-from launcher import *
 
 Form, Window = uic.loadUiType(r'designs\updater.ui')
 app = QApplication([])
@@ -42,4 +41,7 @@ form.progressBar.setValue(100)
 QtTest.QTest.qWait(1050)
 
 window.close()
+
+from launcher import *
+
 start_launcher()
