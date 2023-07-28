@@ -46,6 +46,70 @@
       <height>631</height>
      </rect>
     </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>232</red>
+          <green>232</green>
+          <blue>232</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>255</red>
+          <green>255</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>232</red>
+          <green>232</green>
+          <blue>232</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="Base">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>232</red>
+          <green>232</green>
+          <blue>232</blue>
+         </color>
+        </brush>
+       </colorrole>
+       <colorrole role="Window">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>232</red>
+          <green>232</green>
+          <blue>232</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -530,12 +594,12 @@
      </widget>
      <zorder>background</zorder>
      <zorder>kassa</zorder>
-     <zorder>eschf</zorder>
      <zorder>status</zorder>
      <zorder>eschf_load</zorder>
      <zorder>eschf_status</zorder>
      <zorder>kassa_status_2</zorder>
      <zorder>dynaBox</zorder>
+     <zorder>eschf</zorder>
     </widget>
     <widget class="QWidget" name="page_2"/>
    </widget>

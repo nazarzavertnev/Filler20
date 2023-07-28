@@ -41,8 +41,9 @@ def start_launcher():
     window.show()
     ######################  Настройка окна  ######################
 
+    random.seed()
 
-    winsound.PlaySound("sound\cient.wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+    winsound.PlaySound("sound\cient" + str(random.randrange(1, 8)) + ".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
 
     asyncio.run(anim_dial(form.eschf_load))
     
