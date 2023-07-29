@@ -6,6 +6,7 @@ import winsound
 import json
 import random
 import asyncio
+from eschf import *
 
 async def anim_dial(dial):
     for i in range(5):
@@ -40,32 +41,37 @@ def start_launcher():
     form.descDyna.setText(dyna['0' + randNumber + '_desc'])
     window.show()
     ######################  Настройка окна  ######################
+    form.pages.setCurrentIndex(1)           ######## DELETE
+    start_update_page(form)         ######## DELETE
+    app.exec()          ######## DELETE
 
-    random.seed()
+    # random.seed()
 
-    winsound.PlaySound("sound\cient" + str(random.randrange(1, 4)) + ".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+    # winsound.PlaySound("sound\cient" + str(random.randrange(1, 4)) + ".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
 
-    asyncio.run(anim_dial(form.eschf_load))
+    # asyncio.run(anim_dial(form.eschf_load))
     
 
-    codes_file = open('launcher\eschf\codes.json', encoding="utf8")
-    codes_text = codes_file.read()
-    codes_file.close()
-    codes = json.loads(codes_text)
-    print(codes)
+    # codes_file = open('launcher\eschf\codes.json', encoding="utf8")
+    # codes_text = codes_file.read()
+    # codes_file.close()
+    # codes = json.loads(codes_text)
+    # print(codes)
 
-    QtTest.QTest.qWait(1000)
+    # QtTest.QTest.qWait(1000)
 
-    form.eschf_load.hide()
+    # form.eschf_load.hide()
 
-    form.status.setText("Добро пожаловать!")
-    form.eschf.setEnabled(True)
-    form.eschf_status.setText("Всё хорошо")
+    # form.status.setText("Добро пожаловать!")
+    # form.eschf.setEnabled(True)
+    # form.eschf_status.setText("Всё хорошо")
 
-    def eschf_enter():
-        winsound.PlaySound("sound\enter.wav", winsound.SND_ASYNC)
-        form.pages.setCurrentIndex(1)
+    # def eschf_enter():
+    #     winsound.PlaySound("sound\enter.wav", winsound.SND_ASYNC)
+    #     QtTest.QTest.qWait(1000)
+    #     form.pages.setCurrentIndex(1)
+    #     start_update_page(form)
 
-    form.eschf.clicked.connect(eschf_enter)
+    # form.eschf.clicked.connect(eschf_enter)
 
-    app.exec()
+    # app.exec()

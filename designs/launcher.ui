@@ -614,7 +614,20 @@
       <property name="title">
        <string>Файл</string>
       </property>
-      <widget class="QListWidget" name="listWidget">
+      <widget class="QCommandLinkButton" name="newFileBtn">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>291</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Новая ЭСЧФ</string>
+       </property>
+      </widget>
+      <widget class="QListView" name="fileView">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -631,114 +644,14 @@
        <property name="horizontalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>
-       <property name="autoScroll">
-        <bool>true</bool>
-       </property>
        <property name="autoScrollMargin">
         <number>0</number>
-       </property>
-       <property name="flow">
-        <enum>QListView::TopToBottom</enum>
        </property>
        <property name="isWrapping" stdset="0">
         <bool>true</bool>
        </property>
        <property name="resizeMode">
         <enum>QListView::Adjust</enum>
-       </property>
-       <property name="layoutMode">
-        <enum>QListView::SinglePass</enum>
-       </property>
-       <property name="wordWrap">
-        <bool>false</bool>
-       </property>
-       <item>
-        <property name="text">
-         <string>№ 71</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 72</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 73</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 74</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 75</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 76</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 76</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 76</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 76</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 76</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 100</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 100</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 100</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 100</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>№ 100</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QCommandLinkButton" name="commandLinkButton">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>120</y>
-         <width>291</width>
-         <height>48</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Новая ЭСЧФ</string>
        </property>
       </widget>
      </widget>
@@ -822,9 +735,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>180</y>
+        <y>190</y>
         <width>951</width>
-        <height>411</height>
+        <height>401</height>
        </rect>
       </property>
       <property name="title">
