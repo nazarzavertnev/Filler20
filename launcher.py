@@ -64,6 +64,7 @@ def start_launcher():
 
     def eschf_enter():
         winsound.PlaySound("sound\enter.wav", winsound.SND_ASYNC)
+        form.pages.setCurrentIndex(1)
 
     form.eschf.clicked.connect(eschf_enter)
 
