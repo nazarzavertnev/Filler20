@@ -9,7 +9,8 @@ app = QApplication([])
 window = Window()
 form = Form()
 form.setupUi(window)
-winsound.PlaySound("sound\startap.wav", winsound.SND_ASYNC)
+#winsound.PlaySound("sound\startap.wav", winsound.SND_ASYNC)
+
 
 window.show()
 
