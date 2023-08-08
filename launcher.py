@@ -2,7 +2,7 @@ from PyQt5 import uic, QtTest
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication
 import os
-import winsound
+#import winsound
 import json
 import random
 import asyncio
@@ -19,7 +19,7 @@ async def anim_dial(dial):
 def start_launcher():
     ######################  Настройка окна  ######################
     print(os.getcwd())
-    Form, Window = uic.loadUiType("designs\launcher.ui")
+    Form, Window = uic.loadUiType("designs/launcher.ui")
     app = QApplication([])
     window = Window()
     form = Form()
@@ -46,7 +46,7 @@ def start_launcher():
     app.exec()          ######## DELETE
 
     # random.seed()
-
+    
     # winsound.PlaySound("sound\cient" + str(random.randrange(1, 4)) + ".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
 
     # asyncio.run(anim_dial(form.eschf_load))

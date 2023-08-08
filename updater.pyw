@@ -1,28 +1,29 @@
 from PyQt5 import uic, QtGui, QtTest
 from PyQt5.QtWidgets import QApplication
-import winsound
+#import winsound
 import os
 import subprocess
 
-Form, Window = uic.loadUiType(r'designs\updater.ui')
+Form, Window = uic.loadUiType(r'designs/updater.ui')
 app = QApplication([])
 window = Window()
 form = Form()
 form.setupUi(window)
-winsound.PlaySound("sound\startap.wav", winsound.SND_ASYNC)
+#winsound.PlaySound("sound\startap.wav", winsound.SND_ASYNC)
+
 
 window.show()
 
-form.status.setText("Инициализация...")
-form.progressBar.setValue(15)
-subprocess.Popen("git init", shell = True)
-QtTest.QTest.qWait(1050)
-form.progressBar.setValue(25)
-
-form.status.setText("Получение обновлений...")
-subprocess.Popen("git status", shell = True)
-QtTest.QTest.qWait(1050)
-form.progressBar.setValue(35)
+# form.status.setText("Инициализация...")
+# form.progressBar.setValue(15)
+# subprocess.Popen("git init", sh ell = True)
+# QtTest.QTest.qWait(1050)
+# form.progressBar.setValue(25)
+#
+# form.status.setText("Получение обновлений...")
+# subprocess.Popen("git status", shell = True)
+# QtTest.QTest.qWait(1050)
+# form.progressBar.setValue(35)
 
 # form.status.setText("Восстановление файлов...")
 # subprocess.Popen("git reset --hard", shell = True)
