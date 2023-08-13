@@ -16,7 +16,7 @@ window.show()
 
 form.status.setText("Инициализация...")
 form.progressBar.setValue(15)
-#subprocess.Popen("git init", sh ell = True)
+#subprocess.Popen("git init", shell = True)
 QtTest.QTest.qWait(1050)
 form.progressBar.setValue(25)
 
