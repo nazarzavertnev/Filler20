@@ -3,6 +3,7 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication
 import os
 #import winsound
+from playsound import playsound
 import json
 import random
 import asyncio
@@ -37,41 +38,41 @@ def start_launcher():
     dyna_image = QPixmap("youKnow/0" + randNumber + ".png")
     form.pictureDyna.setPixmap(dyna_image)
 
+    background_image = QPixmap("pictures/rty.png")
+    form.background.setPixmap(background_image)
+    
     form.labelDyna.setText(dyna['0' + randNumber + '_label'])
     form.descDyna.setText(dyna['0' + randNumber + '_desc'])
     window.show()
     ######################  Настройка окна  ######################
-    form.pages.setCurrentIndex(1)           ######## DELETE
-    start_update_page(form)         ######## DELETE
-    app.exec()          ######## DELETE
 
-    # random.seed()
+    random.seed()
     
-    # winsound.PlaySound("sound\cient" + str(random.randrange(1, 4)) + ".wav", winsound.SND_FILENAME | winsound.SND_ASYNC)
+    playsound("sound/cient" + str(random.randrange(1, 4)) + ".wav", block=False)
 
-    # asyncio.run(anim_dial(form.eschf_load))
+    asyncio.run(anim_dial(form.eschf_load))
     
 
-    # codes_file = open('launcher\eschf\codes.json', encoding="utf8")
-    # codes_text = codes_file.read()
-    # codes_file.close()
-    # codes = json.loads(codes_text)
-    # print(codes)
+    codes_file = open('launcher/eschf/codes.json', encoding="utf8")
+    codes_text = codes_file.read()
+    codes_file.close()
+    codes = json.loads(codes_text)
+    print(codes)
 
-    # QtTest.QTest.qWait(1000)
+    QtTest.QTest.qWait(1000)
 
-    # form.eschf_load.hide()
+    form.eschf_load.hide()
 
-    # form.status.setText("Добро пожаловать!")
-    # form.eschf.setEnabled(True)
-    # form.eschf_status.setText("Всё хорошо")
+    form.status.setText("Добро пожаловать!")
+    form.eschf.setEnabled(True)
+    form.eschf_status.setText("Всё хорошо")
 
-    # def eschf_enter():
-    #     winsound.PlaySound("sound\enter.wav", winsound.SND_ASYNC)
-    #     QtTest.QTest.qWait(1000)
-    #     form.pages.setCurrentIndex(1)
-    #     start_update_page(form)
+    def eschf_enter():
+        playsound("sound/enter.wav", block=False)
+        QtTest.QTest.qWait(1000)
+        form.pages.setCurrentIndex(1)
+        start_update_page(form)
 
-    # form.eschf.clicked.connect(eschf_enter)
+    form.eschf.clicked.connect(eschf_enter)
 
-    # app.exec()
+    app.exec()
